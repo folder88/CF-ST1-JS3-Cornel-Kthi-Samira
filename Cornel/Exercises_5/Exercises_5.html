@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    
+<p>Insert car age </p>
+<input id="age" type="text">
+
+<p>Insert car horsepower </p>
+<input id="horsepower" type="text">
+
+<p>Insert car price </p>
+<input id="price" type="text">
+<br><br>
+
+
+<button type="button" onclick="Calculate_price()"> Calculate insurance price</button>
+<p id="message"></p>
+
+
+
+    
+
+    <script>  
+    
+    
+    function Calculate_price() {
+        
+
+
+        message = document.getElementById("message");
+
+        x = document.getElementById("age").value;
+        y = document.getElementById("horsepower").value;
+        z = document.getElementById("price").value;
+
+        
+            
+            try {
+
+
+                
+
+                if(x == "")  throw  "is Empty";
+                if (x > 35) throw "Your car is way to old for our insurance system";
+                if (isNaN(x)) throw "not a car age number";
+                
+                if (y == "") throw "is Empty";
+                if (y > 600) throw "Your car is way to powerful for our insurance system";
+                if (y < 50) throw "Do you have a motocycle?";
+                if (isNaN(y)) throw "not a power number";
+
+
+                if (z == "") throw "is Empty";
+                if (z > 150000) throw "Your car is way to expensive for our insurance system";
+                if (z < 1500) throw "Your car is way to cheap for our insurance system";
+                if (isNaN(z)) throw "not a price  number";
+
+                
+                var a = parseInt(x);
+                var b = parseInt(y);
+                var c = parseInt(z);
+
+                var price = a/100 + b -a*10;
+
+                document.write("Your insurence price is "+price);
+                
+            }
+            catch(err) {
+            message.innerHTML = "Input " + err;
+            }
+        }
+
+    </script>
+</body>
+</html>
