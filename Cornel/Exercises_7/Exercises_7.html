@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #circle {
+
+
+            position: absolute;
+            left: 900px;
+            top: 350px;
+            width: 200px;
+            height: 200px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            border-radius: 100px;
+            background: blue;
+        }
+ 
+
+    </style>
+    <div id="circle"  onclick = "SetNewFunction0()" onmouseover = "SetNewFunction()" onmouseout = "SetNewFunction1()"></div>
+    
+    <p id = "p"></p>
+
+    
+
+    <script>
+    let i = 0;
+        function SetNewFunction0() {
+            var array = ["grey","blue"];
+            
+            document.body.style.backgroundColor = array[i]
+            i++;
+            
+        }
+        function SetNewFunction() {
+                document.getElementById("p").innerHTML = "You are in the cicle";
+            }
+        function SetNewFunction1() {
+                document.getElementById("p").innerHTML = "You are out of  the cicle";
+                }
+    </script>
+</body>
+</html>
