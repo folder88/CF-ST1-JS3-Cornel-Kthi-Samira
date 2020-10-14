@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var a;
+        var b;
+        var birthYear = 1988;
+        var CurrentYear = 2020;
+        var age;
+        var aditional_age;
+        var javascriptyear = new Date().getFullYear();
+        
+        function ageCalculator(a, b){
+
+            age = a - b;
+            adiitional_age = age + 1;
+            document.write("You are " + age + " or " + aditional_age + "<br><br>");
+        }
+
+        ageCalculator(CurrentYear, birthYear);
+        ageCalculator(javascriptyear, birthYear);
+        
+    </script>
+</body>
+</html>
