@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<p  id = "p1" onmouseover="SetNewFunction()" style = "background-color: brown;color: cornsilk;">Move your mouse here</p>
+
+<p id = "p2" onmouseover="SetNewFunction()" style="background-color:blueviolet;color: cornsilk;">Move your mouse here</p>
+
+
+<h2 id = "h2">Empty</h2>
+
+
+    <script>
+
+        function SetNewFunction(){
+            let ranNumber1 = Math.floor(Math.random()*101);
+            let ranNumber2 = Math.floor(Math.random() * 101);
+            document.getElementById("p1").innerHTML= ranNumber1;
+            document.getElementById("p2").innerHTML = ranNumber2;
+            
+
+            if(ranNumber1 > ranNumber2){
+                    document.getElementById("h2").innerHTML = ranNumber1 + " > " + ranNumber2 ;
+            }
+            
+            else{
+                document.getElementById("h2").innerHTML = ranNumber1 + " < " + ranNumber2;
+            }
+        }
+            function SetNewFunction1() {
+                console.log("Hallo world1");
+            }
+        
+    </script>
+</body>
+</html>
